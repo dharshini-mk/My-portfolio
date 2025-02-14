@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #000;
+    color: white;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: cyan;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: cyan;
+}
+
+nav ul li a.active::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: cyan;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 150px 10%;
+}
+
+.content {
+    max-width: 500px;
+}
+
+.content h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.content h2 span {
+    color: cyan;
+}
+
+.content h3 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: white;
+}
+
+#typing {
+    color: cyan;
+    font-weight: bold;
+}
+
+p {
+    margin: 20px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: cyan;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: 2px solid cyan;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.hire {
+    background: cyan;
+    color: black;
+}
+
+.contact {
+    color: cyan;
+}
+
+.btn:hover {
+    background: cyan;
+    color: black;
+}
+
+/* Glowing Image */
+.image {
+    position: relative;
+}
+
+.glow {
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 50px cyan;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: cyan;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    border: 2px solid cyan;
+    box-shadow: 0 0 10px cyan;
+    color: white;
+    text-align: center;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: cyan;
+    border-radius: 50%;
+    top: 15px;
+    right: -10px;
+    box-shadow: 0 0 10px cyan;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+    .timeline-item {
+        width: 100%;
+        left: 0;
+        text-align: left;
+    }
+    .timeline-item::after {
+        left: 10px;
+    }
+}
+
+.about-section {
+    background: #e41d32;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.testimonial-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote-icon {
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 50px;
+    padding: 100px;
+    max-width: 1000px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid white;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #666;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    color: #e41d32;
+    margin-top: 10px;
+}
+
+.testimonial-role {
+    font-size: 14px;
+    color: #777;
+}
+
+.dots {
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: white;
+}
+
+
+.section-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 30px 0;
+}
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.project-card {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.project-icon {
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.project-icon:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.skills-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.skills-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skills-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.skills-track {
+    display: flex;
+    gap: 15px;
+    animation: scrollSkills 10s linear infinite;
+}
+
+.skill-card {
+    min-width: 150px;
+    height: 140px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    padding: 10px;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+}
+
+/* Icon Styling */
+.skill-card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Skill Name */
+.skill-card span {
+    font-size: 1rem;
+}
+
+/* Animation */
+@keyframes scrollSkills {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Infinite loop */
+.skills-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+}
+
+/* General Styles */
+
+.interests-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Interest Cards */
+.interests-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.interest-card {
+    width: 300px;
+    padding: 20px;
+    background: white;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+
+.interest-card:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Contact Form Container */
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+}
+
+/* Contact Form Title */
+.contact-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-title span {
+    color: cyan;
+}
+
+/* Input Fields */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: transparent;
+    border: 2px solid cyan;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Textarea */
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Send Button */
+.send-btn {
+    background-color: cyan;
+    border: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #2C3E50; /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #1DA1F2; /* Twitter blue or any highlight color */
+}
