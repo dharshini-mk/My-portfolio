@@ -113,19 +113,19 @@ document.addEventListener("DOMContentLoaded", function () {
 const projects = [
     {
         title: "Movie Recommendation App",
-        description: "An AI-powered movie suggestion app.",
+        description: "Built using React.js, Node.js, MongoDB, Firebase, TMDB, OMDB API.",
         image: "movie.png",  // 🔥 Change this to your project image
         link: "https://movie-api-x41h.vercel.app/movies" // 🔥 Your project link here
     },
     {
-        title: "Frontend Development",
-        description: "Building interactive web interfaces with React.",
+        title: "Event Website",
+        description: "Built a responsive website for event registration for the Women Development Cell using HTML, CSS and Javascript.",
         image: "wdc.png",
         link: "https://wdcshrishti25.vercel.app/"
     },
     {
-        title: "Backend Development",
-        description: "Developing REST APIs for scalable applications.",
+        title: "Real Estate Chatbot",
+        description: "Built using Python, Streamlit, Google Gemini API.",
         image: "real.png",
         link: "https://github.com/dharshini-mk/Real-Estate-Chatbot.git"
     },

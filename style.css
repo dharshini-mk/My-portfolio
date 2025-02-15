@@ -137,7 +137,9 @@ p {
 /* Social Icons */
 .social-icons {
     display: flex;
-    gap: 5px;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 10px; /* Adjust spacing between icons */
     margin-bottom: 20px;
 }
 
@@ -145,7 +147,9 @@ p {
     color: rgb(236, 94, 161);
     font-size: 22px;
     transition: 0.3s;
+    text-align: center;
 }
+
 
 .social-icons a:hover {
     color: white;
@@ -440,7 +444,7 @@ p {
 
 
 .section-title {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     margin: 30px 0;
 }
@@ -612,6 +616,17 @@ p {
 
 .interest-card:hover {
     transform: scale(1.05);
+    background: rgb(236, 94, 161, 0.5);
+    color: white;
+    cursor: pointer;
+}
+
+.interest-card p{
+    color: #000;
+}
+
+.interest-card p:hover{
+    color: white;
 }
 
 h3 {
@@ -676,7 +691,7 @@ form textarea {
 }
 
 footer {
-    background-color: #2C3E50; /* Dark background */
+    background-color: rgb(236, 94, 161, 0.5); /* Dark background */
     color: white;
     text-align: center;
     padding: 20px;
