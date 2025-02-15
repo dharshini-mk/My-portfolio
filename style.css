@@ -32,40 +32,66 @@ header {
 }
 
 .logo span {
-    color: cyan;
+    color: rgb(236, 94, 161);
 }
 
 nav ul {
-    list-style: none;
     display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
 nav ul li {
-    margin: 0 20px;
+    position: relative;
 }
 
 nav ul li a {
+    text-decoration: none; /* Remove default underline */
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Underline effect using ::after */
+nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px; /* Thickness of underline */
+    background: rgb(236, 94, 161);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Show underline on hover and active */
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* 🚀 Remove any extra underline caused by active state */
+nav ul li a.active {
+    border-bottom: none !important; /* 💀 Kill any unwanted border */
+    text-decoration: none !important; /* 🚨 No extra underline */
+}
+
+
+.nav-link {
     text-decoration: none;
     color: white;
-    font-weight: 400;
-    position: relative;
+    padding: 10px 15px;
     transition: 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: cyan;
+.nav-link.active {
+    color: rgb(236, 94, 161); /* Highlight the active section */
+    font-weight: bold;
+    border-bottom: 2px solid rgb(236, 94, 161);
 }
 
-nav ul li a.active::after {
-    content: "";
-    width: 100%;
-    height: 2px;
-    background: cyan;
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-}
 
 /* Hero Section */
 .hero {
@@ -86,7 +112,7 @@ nav ul li a.active::after {
 }
 
 .content h2 span {
-    color: cyan;
+    color: rgb(236, 94, 161);
 }
 
 .content h3 {
@@ -97,7 +123,7 @@ nav ul li a.active::after {
 }
 
 #typing {
-    color: cyan;
+    color: rgb(236, 94, 161);
     font-weight: bold;
 }
 
@@ -111,18 +137,30 @@ p {
 /* Social Icons */
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 5px;
     margin-bottom: 20px;
 }
 
 .social-icons a {
-    color: cyan;
+    color: rgb(236, 94, 161);
     font-size: 22px;
     transition: 0.3s;
 }
 
 .social-icons a:hover {
     color: white;
+}
+
+.leetcode-icon img {
+    width: 18px;  /* Reduce the width */
+    height: 20px; /* Reduce the height */
+    vertical-align: middle;
+    filter: brightness(0) invert(1); /* Makes it white on dark background */
+    transition: filter 0.3s ease-in-out;
+}
+
+.leetcode-icon:hover img {
+    filter: brightness(1); /* Original color on hover */
 }
 
 /* Buttons */
@@ -133,7 +171,7 @@ p {
 
 .btn {
     padding: 12px 24px;
-    border: 2px solid cyan;
+    border: 2px solid rgb(236, 94, 161);
     border-radius: 25px;
     text-decoration: none;
     transition: 0.3s;
@@ -143,16 +181,21 @@ p {
 }
 
 .hire {
-    background: cyan;
+    background: rgb(236, 94, 161);
     color: black;
 }
 
-.contact {
-    color: cyan;
+.hire:hover{
+    background-color: #000;
+    color: rgb(236, 94, 161);
 }
 
-.btn:hover {
-    background: cyan;
+.contact {
+    color: rgb(236, 94, 161);
+}
+
+.contact:hover {
+    background: rgb(236, 94, 161);
     color: black;
 }
 
@@ -165,7 +208,7 @@ p {
     width: 350px;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0 0 50px cyan;
+    box-shadow: 0 0 50px rgb(236, 94, 161);
 }
 
 .timeline {
@@ -179,7 +222,7 @@ p {
     content: '';
     position: absolute;
     width: 4px;
-    background: cyan;
+    background: rgb(236, 94, 161);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -192,8 +235,8 @@ p {
     padding: 10px 30px;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 30px;
-    border: 2px solid cyan;
-    box-shadow: 0 0 10px cyan;
+    border: 2px solid rgb(236, 94, 161);
+    box-shadow: 0 0 10px rgb(236, 94, 161);
     color: white;
     text-align: center;
 }
@@ -212,11 +255,11 @@ p {
     position: absolute;
     width: 20px;
     height: 20px;
-    background: cyan;
+    background: rgb(236, 94, 161);
     border-radius: 50%;
     top: 15px;
     right: -10px;
-    box-shadow: 0 0 10px cyan;
+    box-shadow: 0 0 10px rgb(236, 94, 161);
 }
 
 .timeline-item:nth-child(even)::after {
@@ -238,10 +281,11 @@ p {
 }
 
 .about-section {
-    background: #e41d32;
+    background: rgb(236, 94, 161, 0.7);
     padding: 100px 0;
     text-align: center;
     position: relative;
+    font-weight: bold;
 }
 
 .testimonial-container {
@@ -295,7 +339,7 @@ p {
 
 .testimonial-name {
     font-weight: bold;
-    color: #e41d32;
+    color: rgb(236, 94, 161);
     margin-top: 10px;
 }
 
@@ -419,7 +463,7 @@ p {
 .skill-card {
     min-width: 150px;
     height: 140px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgb(236, 94, 161, 0.4);
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -434,6 +478,9 @@ p {
 
 .skill-card:hover {
     transform: scale(1.1);
+    background-color: rgb(236, 94, 161, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
 }
 
 /* Icon Styling */
@@ -517,7 +564,7 @@ h3 {
 }
 
 .contact-title span {
-    color: cyan;
+    color: rgb(236, 94, 161);
 }
 
 /* Input Fields */
@@ -526,7 +573,7 @@ form input, form textarea {
     padding: 10px;
     margin: 10px 0;
     background: transparent;
-    border: 2px solid cyan;
+    border: 2px solid rgb(236, 94, 161);
     color: white;
     font-size: 16px;
     border-radius: 5px;
@@ -540,7 +587,7 @@ form textarea {
 
 /* Send Button */
 .send-btn {
-    background-color: cyan;
+    background-color: rgb(236, 94, 161);
     border: none;
     color: black;
     font-size: 18px;
@@ -577,5 +624,5 @@ footer {
 }
 
 .social-icons a:hover {
-    color: #1DA1F2; /* Twitter blue or any highlight color */
+    color: rgb(236, 94, 161); /* Twitter blue or any highlight color */
 }

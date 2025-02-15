@@ -16,26 +16,29 @@
         <h1 class="logo">MK<span>D</span></h1>
         <nav>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#" >About</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Contact</a></li>
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="content">
             <h2>Hi, It's <span>Dharshini M K</span></h2>
             <h3>I'm a <span id="typing"></span></h3>
             <p>Pursuing III year B.E in Computer Science and Engineering</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/dharshinimk/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:mkdharshini24@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://github.com/dharshini-mk"><i class="fab fa-github"></i></a>
+                <a href="https://leetcode.com/u/22CSR046_MKD/" target="_blank" class="leetcode-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/LeetCode_logo_white_no_text.svg/406px-LeetCode_logo_white_no_text.svg.png" alt="LeetCode">
+                </a>
+                <a href="https://www.hackerrank.com/profile/22CSR046_MKD"><i class="fab fa-hackerrank"></i></a>
             </div>
             <div class="buttons">
                 <a href="DHARSHINI M K.pdf" class="btn hire" download>Resume</a>
@@ -47,7 +50,7 @@
         </div>
     </section>
 
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="testimonial-container">
             <div class="quote-icon">❝</div>
             <div class="testimonial-card">
@@ -89,12 +92,12 @@
         </div>
     </section>
 
-    <section class="projects-section">
+    <section class="projects-section" id="projects">
         <h1 class="section-title">Projects</h1>
         <div class="projects-container"></div>
     </section>
     
-    <div class="skills-section">
+    <div class="skills-section" id="skills">
         <h2 class="skills-title">My Skills</h2>
         <div class="skills-carousel">
             <div class="skills-track">
@@ -176,7 +179,7 @@
         </div>
     </section>
 
-    <div class="contact-container">
+    <div class="contact-container" id="contact">
         <h2 class="contact-title"><span>Contact</span> Me</h2>
         <form action="https://formsubmit.co/mkdharshini24@gmail.com" method="POST">
             <input type="text" name="name" placeholder="Full Name" required>

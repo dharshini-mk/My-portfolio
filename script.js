@@ -1,4 +1,4 @@
-const words = ["Web Developer", "Designer", "Freelancer"];
+const words = ["Student", "Web Developer", "Graphic Designer"];
 let i = 0;
 let j = 0;
 let currentWord = "";
@@ -41,6 +41,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", checkItems);
     checkItems();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section");
+
+    // Smooth Scroll on Click
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            window.scrollTo({
+                top: targetSection.offsetTop - 50,
+                behavior: "smooth"
+            });
+        });
+    });
+
+    // Highlight Active Section in Navbar
+    window.addEventListener("scroll", function () {
+        let current = "";
+        const scrollPosition = window.scrollY + 200; // Increase threshold
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        // Set active class
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === current) {
+                link.classList.add("active");
+            }
+        });
+    });
 });
 
 
