@@ -235,3 +235,7 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
     e.target.reset();
 });
 
+
+function toggleMenu() {
+    document.querySelector("nav ul").classList.toggle("show");
+}

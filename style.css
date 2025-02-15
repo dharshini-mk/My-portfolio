@@ -280,20 +280,6 @@ p {
     left: -10px;
 }
 
-@media screen and (max-width: 768px) {
-    .timeline::after {
-        left: 20px;
-    }
-    .timeline-item {
-        width: 100%;
-        left: 0;
-        text-align: left;
-    }
-    .timeline-item::after {
-        left: 10px;
-    }
-}
-
 .about-section {
     background: rgb(236, 94, 161, 0.7);
     padding: 100px 0;
@@ -738,3 +724,102 @@ footer {
 html {
     scroll-behavior: smooth;
 }
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+@media only screen and (max-width: 412px),
+       only screen and (max-width: 320px),
+       only screen and (max-width: 480px),
+       only screen and (max-width: 375px),
+       only screen and (max-width: 414px),
+       only screen and (max-width: 360px),
+       only screen and (max-width: 390px),
+       only screen and (max-width: 600px),
+       only screen and (max-width: 768px){
+            
+            nav ul {
+                position: absolute;
+                top: 60px; /* Adjust based on header height */
+                right: 10px;
+                background: rgba(0, 0, 0, 0.9);
+                width: fit-content;
+                min-width: 140px; /* Keeps it compact */
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgb(236, 94, 161);
+                display: none; /* Hide initially */
+                flex-direction: column;
+                gap: 10px; /* Reduce spacing */
+                padding: 10px;
+            }
+        
+            nav ul.active {
+                display: flex; /* Show when toggled */
+            }
+        
+            nav ul li {
+                text-align: center;
+            }
+        
+            nav ul li a {
+                padding: 8px 12px; /* Reduce padding */
+                font-size: 14px; /* Smaller text */
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+        
+            .menu-toggle {
+                display: block;
+            }
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 120px 5%;
+            }
+        
+            .content h2 {
+                font-size: 32px;
+            }
+        
+            .content h3 {
+                font-size: 24px;
+            }
+        
+            .buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        
+            .image img {
+                width: 250px; /* Reduce image size */
+                margin-top: 50px;
+            }
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+            .timeline::after {
+                left: 20px; /* Move the timeline line to the left */
+            }
+        
+            .timeline-item {
+                width: 90%; /* Make it take full width */
+                left: 0 !important; /* Override positioning */
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center; /* Center text */
+                transform: translateX(0) !important;
+                transform: translateX(0) translateY(0) !important;
+            }
+        
+            .timeline-item::after {
+                left: -10px !important; /* Align dots properly */
+                right: auto;
+            }
+        
+       }
