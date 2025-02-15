@@ -130,10 +130,10 @@ const projects = [
         link: "https://github.com/dharshini-mk/Real-Estate-Chatbot.git"
     },
     {
-        title: "Testing Automation",
-        description: "Implementing automated testing strategies.",
-        image: "https://yourimageurl.com/testing.jpg",
-        link: "https://yourtestingproject.com"
+        title: "Portfolio",
+        description: "Responsive in mobile and desktop devices.",
+        image: "pf.png",
+        link: "https://dharshini-mk.vercel.app/"
     }
 ];
 
@@ -169,6 +169,28 @@ projects.forEach(project => {
 
     container.appendChild(card);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const projectCards = document.querySelectorAll(".project-card");
+
+    const checkProjects = () => {
+        projectCards.forEach((card, index) => {
+            const rect = card.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.75) {
+                card.classList.add("show"); // Pop-up animation
+                setTimeout(() => {
+                    card.classList.add("done"); // Settle to normal size
+                }, 300);
+            } else {
+                card.classList.remove("show", "done"); // Remove on scroll out
+            }
+        });
+    };
+
+    window.addEventListener("scroll", checkProjects);
+    checkProjects(); // Run once on load
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const track = document.querySelector(".skills-track");
@@ -212,3 +234,4 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
 
     e.target.reset();
 });
+

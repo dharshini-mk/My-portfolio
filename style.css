@@ -222,6 +222,11 @@ p {
     padding: 50px 0;
 }
 
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0); /* Slide into place */
+}
+
 .timeline::after {
     content: '';
     position: absolute;
@@ -243,6 +248,9 @@ p {
     box-shadow: 0 0 10px rgb(236, 94, 161);
     color: white;
     text-align: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Move down */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .timeline-item:nth-child(odd) {
@@ -252,6 +260,8 @@ p {
 .timeline-item:nth-child(even) {
     left: 50%;
     text-align: left;
+    transform: translateX(50px); /* Move right */
+
 }
 
 .timeline-item::after {
@@ -464,9 +474,20 @@ p {
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
     overflow: hidden;
     cursor: pointer;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.8); /* Start smaller */
+}
+
+.project-card.show {
+    opacity: 1;
+    transform: scale(1.05); /* Pop up effect */
+}
+
+.project-card.show.done {
+    transform: scale(1); /* Settle to normal size */
 }
 
 .project-card:hover {
