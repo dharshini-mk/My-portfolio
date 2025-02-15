@@ -85,6 +85,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.querySelector('.btn.contact').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutSection = document.querySelector(".about-section");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    aboutSection.classList.add("show"); // Fade in
+                } else {
+                    aboutSection.classList.remove("show"); // Fade out
+                }
+            });
+        },
+        { threshold: 0.2 } // Triggers when 20% of the section is visible
+    );
+
+    observer.observe(aboutSection);
+});
+
 
 const projects = [
     {
