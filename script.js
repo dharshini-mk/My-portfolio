@@ -1,4 +1,4 @@
-const words = ["Student", "Web Developer", "Graphic Designer"];
+const words = ["Student", "Front-end Developer", "Graphic Designer"];
 let i = 0;
 let j = 0;
 let currentWord = "";
@@ -124,16 +124,16 @@ const projects = [
         link: "https://wdcshrishti25.vercel.app/"
     },
     {
-        title: "Real Estate Chatbot",
-        description: "Built using Python, Streamlit, Google Gemini API.",
+        title: "Alzheimer's Disease Prediction",
+        description: "Built using TensorFlow, Keras, Streamlit and Python",
         image: "real.png",
-        link: "https://github.com/dharshini-mk/Real-Estate-Chatbot.git"
+        link: "https://alzheimer-s-disease-prediction.streamlit.app/"
     },
     {
-        title: "Portfolio",
-        description: "Responsive in mobile and desktop devices.",
-        image: "pf.png",
-        link: "https://dharshini-mk.vercel.app/"
+        title: "Thenu's Style Studio - Beauty Parlor Booking System ",
+        description: "Built a premium beauty parlor booking platform with real-time appointment management and SMS notifications via Twilio API for booking confirmations.",
+        image: "t.jpg",
+        link: "https://thenusmakeover.vercel.app/"
     }
 ];
 
